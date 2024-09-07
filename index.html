@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spotify-Web Player: Music</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="icon"
+      href="https://storage.googleapis.com/pr-newsroom-wp/1/2023/05/Spotify_Primary_Logo_RGB_Green.png"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
+    <nav>
+      <i class="fa-brands fa-spotify"></i>
+      <div class="search-bar">
+        <i class="fa-solid fa-house"></i>
+        <div class="thingie">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input
+            placeholder="What do you want to play?"
+            type="text"
+            class="search"
+          />
+        </div>
+      </div>
+      <div class="sign-log">
+        <button class="sign">Sign up</button>
+        <button class="log">Log in</button>
+      </div>
+    </nav>
+
+    <div class="main">
+      <div class="left">
+        <div class="left-nav">
+          <div class="leftleft">
+            <i class="fa-solid fa-record-vinyl"></i>
+            <div class="lib">Your Library</div>
+          </div>
+          <i class="fa-solid fa-plus"></i>
+        </div>
+
+        <div class="songs">
+          <ul>
+            <li class="song" data-src="Songs/ Last Paradise.mp3">
+              Last Paradise
+            </li>
+            <li class="song" data-src="Songs/ Your Gonna Miss Me.mp3">
+              Your Gonna Miss Me
+            </li>
+            <li class="song" data-src="Songs/Fragile.mp3">Fragile</li>
+            <li class="song" data-src="Songs/GUV'NOR .mp3">GUV'NOR</li>
+            <li class="song" data-src="Songs/Hurrican Dorothy.mp3">
+              Hurrican Dorothy
+            </li>
+            <li class="song" data-src="Songs/Kiwi .mp3">Kiwi</li>
+            <li class="song" data-src="Songs/Libet's Delay.mp3">
+              Libet's Delay
+            </li>
+            <li class="song" data-src="Songs/Mayonaka No Door.mp3">
+              Mayonaka No Door
+            </li>
+            <li
+              class="song"
+              data-src="Songs/New Person, Same Old Mistakes .mp3"
+            >
+              New Person, Same Old Mistakes
+            </li>
+            <li class="song" data-src="Songs/Will He.mp3">Will He</li>
+            <li class="song" data-src="Songs/Important Podcast.mp3">
+              Important Podcast
+            </li>
+          </ul>
+
+          <audio id="audioPlayer" src="Songs/ Last Paradise.mp3"></audio>
+        </div>
+      </div>
+
+      <div class="right">
+        <div class="right-up">
+          <div class="label">Popular Artists</div>
+
+          <div class="Creators">
+            <div class="items">
+              <img
+                class="Artist"
+                src="Images/Artists/Kendrick Lamar.jpg"
+                alt="Joji"
+              />
+              <div class="name">Kendrick Lamar</div>
+              <div class="description">Artist</div>
+            </div>
+
+            <div class="items">
+              <img class="Artist" src="Images/Artists/joji.jpg" alt="Joji" />
+              <div class="name">Joji</div>
+              <div class="description">Artist</div>
+            </div>
+
+            <div class="items">
+              <img class="Artist" src="Images/Artists/MF DOOM.jpg" alt="Joji" />
+              <div class="name">MF DOOM</div>
+              <div class="description">Artist</div>
+            </div>
+
+            <div class="items">
+              <img class="Artist" src="Images/Artists/Nujabes.jpg" alt="Joji" />
+              <div class="name">Nujabes</div>
+              <div class="description">Artist</div>
+            </div>
+
+            <div class="items">
+              <img
+                class="Artist"
+                src="Images/Artists/Tyler, The creator.jpg"
+                alt="Joji"
+              />
+              <div class="name">Tyler</div>
+              <div class="description">Artist</div>
+            </div>
+          </div>
+
+          <div class="label">Popular Albums</div>
+
+          <div class="Creators">
+            <div class="items">
+              <img
+                class="Albums"
+                src="Images/Albums/To Pimp A Butterfly.jpg"
+                alt="Joji"
+              />
+              <div class="name">To Pimp A Butterfly</div>
+              <div class="description">Kendrick Lamar</div>
+            </div>
+
+            <div class="items">
+              <img
+                class="Albums"
+                src="Images/Albums/Modal Soul.jpg "
+                alt="Joji"
+              />
+              <div class="name">Modal Soul</div>
+              <div class="description">Nujabes</div>
+            </div>
+
+            <div class="items">
+              <img
+                class="Albums"
+                src="Images/Albums/Everywhere at the end of time.jpg"
+                alt="Joji"
+              />
+              <div class="name">Everywhere At The End Of Time</div>
+              <div class="description">Caretaker</div>
+            </div>
+
+            <div class="items">
+              <img
+                class="Albums"
+                src="Images/Albums/Crimson King.jpg"
+                alt="Joji"
+              />
+              <div class="name">Crimson King</div>
+              <div class="description">King Crimson</div>
+            </div>
+
+            <div class="items">
+              <img
+                class="Albums"
+                src="Images/Albums/C418 Minecraft volume alpha.jpg"
+                alt="Joji"
+              />
+              <div class="name">Minecraft Volume alpha</div>
+              <div class="description">C418</div>
+            </div>
+          </div>
+
+          <div class="label">Popular Songs</div>
+
+          <div class="Creators">
+            <div class="items">
+              <img
+                class="Albums"
+                src="Images/Song-Pics/'ELLO GOV'NOR.png"
+                alt="Joji"
+              />
+              <div class="name">'ELLO GOV'NOR</div>
+              <div class="description">MF DOOM</div>
+              <i
+                class="fa-solid fa-play up song"
+                data-src="Songs/GUV'NOR .mp3"
+              ></i>
+            </div>
+
+            <div class="items">
+              <img
+                class="Albums"
+                src="Images/Song-Pics/FRAGILE.jpg"
+                alt="Joji"
+              />
+              <div class="name">FRAGILE</div>
+              <div class="description">Tatsuro Yamashita</div>
+              <i
+                class="fa-solid fa-play up song"
+                data-src="Songs/Fragile.mp3"
+              ></i>
+            </div>
+
+            <div class="items">
+              <img
+                class="Albums"
+                src="Images/Song-Pics/Hurrican Dorothy.jpg"
+                alt="Joji"
+              />
+              <div class="name">Hurrican Dorothy</div>
+              <div class="description">Haruomi Hosono</div>
+              <i
+                class="fa-solid fa-play up song"
+                data-src="Songs/Hurrican Dorothy.mp3"
+              ></i>
+            </div>
+
+            <div class="items">
+              <img class="Albums" src="Images/Song-Pics/Kiwi.jpg" alt="Joji" />
+              <div class="name">Kiwi</div>
+              <div class="description">Harry Styles</div>
+              <i
+                class="fa-solid fa-play up song"
+                data-src="Songs/Kiwi .mp3"
+              ></i>
+            </div>
+
+            <div class="items">
+              <img
+                class="Albums"
+                src="Images/Song-Pics/Liebet's Delay.jpg"
+                alt="Joji"
+              />
+              <div class="name">Liebet's Delay</div>
+              <div class="description">The Caretaker</div>
+
+              <i
+                class="fa-solid fa-play up song"
+                data-src="Songs/Libet's Delay.mp3"
+              ></i>
+            </div>
+            <div class="items">
+              <img
+                class="Albums"
+                src="Images/Song-Pics/Mayonaka no door.jpg"
+                alt="Joji"
+              />
+              <div class="name">Mayonaka no Door</div>
+              <div class="description">Miki Matsubara</div>
+              <i
+                class="fa-solid fa-play down song"
+                data-src="Songs/Mayonaka No Door.mp3"
+              ></i>
+            </div>
+
+            <div class="items">
+              <img
+                class="Albums"
+                src="Images/Song-Pics/New Person, Same Old Mistakes.jpg"
+                alt="Joji"
+              />
+              <div class="name">New Person, Same Old Mistakes</div>
+              <div class="description">Tame Impala</div>
+
+              <i
+                class="fa-solid fa-play down song"
+                data-src="Songs/New Person, Same Old Mistakes .mp3"
+              ></i>
+            </div>
+
+            <div class="items">
+              <img
+                class="Albums"
+                src="Images/Song-Pics/The Last Paradise (最後の楽園).jpg"
+                alt="Joji"
+              />
+              <div class="name">The Last Paradise (最後の楽園)</div>
+              <div class="description">Haruomi Hosono</div>
+              <i
+                class="fa-solid fa-play down song"
+                data-src="Songs/ Last Paradise.mp3"
+              ></i>
+            </div>
+
+            <div class="items">
+              <img
+                class="Albums"
+                src="Images/Song-Pics/Will He.jpg"
+                alt="Joji"
+              />
+              <div class="name">Will He</div>
+              <div class="description">Joji</div>
+
+              <i
+                class="fa-solid fa-play down song"
+                data-src="Songs/Will He.mp3"
+              ></i>
+            </div>
+
+            <div class="items">
+              <img
+                class="Albums"
+                src="Images/Song-Pics/you're Gonna Miss  Me.jpg"
+                alt="Joji"
+              />
+              <div class="name">You're Gonna Miss Me</div>
+              <div class="description">Thirteenth Floor Elevators</div>
+
+              <i
+                class="fa-solid fa-play down song"
+                data-src="Songs/ Your Gonna Miss Me.mp3"
+              ></i>
+            </div>
+          </div>
+        </div>
+
+        <div class="right-down">
+          <div class="player">
+            <!-- add the name and the artist name for the song -->
+            <i class="fa-solid fa-backward"></i>
+            <i class="fa-solid fa-play play"></i>
+            <!-- <i class="fa-solid fa-pause"></i> -->
+            <i class="fa-solid fa-forward"></i>
+          </div>
+          <div class="seekbar">
+            <div class="dot"></div>
+            <div class="line">.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
