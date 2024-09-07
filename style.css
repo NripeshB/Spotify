@@ -1,0 +1,277 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: black;
+}
+
+.fa-solid {
+  color: white;
+}
+.fa-spotify {
+  color: white;
+  font-size: 30px;
+  margin-left: 20px;
+}
+nav {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.main {
+  display: flex;
+  justify-items: center;
+}
+
+.right {
+  margin: 3px;
+  margin-top: 0px;
+  background-image: linear-gradient(180deg, #2d2d2d 0%, #0a0a0a 65%);
+
+  height: 80vh;
+  width: 73vw;
+  border-radius: 7px;
+}
+.search-bar {
+  gap: 10px;
+  display: flex;
+  align-items: center;
+}
+.fa-magnifying-glass {
+  color: rgb(101, 101, 101);
+}
+.thingie {
+  border-radius: 30px;
+  gap: 5px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  background-color: rgb(32, 32, 32);
+}
+.left {
+  border-radius: 7px;
+  margin: 3px;
+  margin-top: 0px;
+  background-color: #1b1b1b00;
+  width: 25vw;
+  height: 98vh;
+}
+
+.search {
+  outline: none;
+  color: white;
+  width: max(300px, 40vw);
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+}
+.fa-house:active {
+  background-color: rgb(0, 0, 0);
+}
+.fa-house:hover {
+  color: rgb(217, 217, 217);
+}
+.fa-house {
+  margin-left: 30px;
+  padding: 10px;
+  background-color: rgb(32, 32, 32);
+  border-radius: 100%;
+}
+.left-nav {
+  height: 10vh;
+  border-radius: 7px;
+  background-color: rgb(32, 32, 32);
+
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.left-songs {
+  width: 100%;
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  height: auto;
+  border-radius: 7px;
+  background-color: #1b1b1b;
+  margin-top: 5px;
+  color: #1b1b1b;
+}
+.leftleft {
+  margin-left: 20px;
+  gap: 10px;
+  display: flex;
+}
+.fa-plus {
+  color: rgb(169, 169, 169);
+}
+.fa-record-vinyl {
+  font-size: 20px;
+  color: rgb(169, 169, 169);
+}
+.lib {
+  color: rgb(169, 169, 169);
+}
+
+.fa-plus {
+  margin-right: 20px;
+}
+
+.sign:active {
+  color: #ffffff;
+}
+.sign {
+  color: #c9c9c9;
+  padding: 10px;
+  border: none;
+  background-color: #0a0a0a00;
+}
+.right::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+.right::-webkit-scrollbar-track {
+  background-color: #333;
+}
+
+.right::-webkit-scrollbar-thumb {
+  background-color: #555;
+  border-radius: 10px;
+}
+
+.right::-webkit-scrollbar-thumb:hover {
+  background-color: #888;
+}
+
+.log:active {
+  background-color: rgb(219, 219, 219);
+}
+.log {
+  color: #000000;
+  padding: 10px 25px;
+  border-radius: 30px;
+  margin-right: 20px;
+  border: none;
+  background-color: white;
+}
+
+.right {
+  overflow-y: auto;
+  overflow-x: auto;
+  display: grid;
+}
+.Creators {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+.first-row {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+.label {
+  margin-top: 30px;
+  margin-left: 14px;
+  font-size: x-large;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.items:active {
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #0f0f0f;
+}
+.items {
+  position: relative;
+  padding: 10px;
+  margin-top: 15px;
+  margin: 10px;
+  gap: 5px;
+  display: inline-block;
+  flex-direction: column;
+}
+.label {
+  color: white;
+}
+
+.name {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 1.2em;
+  color: white;
+  margin-left: 7px;
+}
+.description {
+  margin-left: 7px;
+  font-size: 0.8em;
+  color: rgb(192, 192, 192);
+}
+
+.Artist:hover {
+  cursor: pointer;
+}
+.Artist {
+  border-radius: 100%;
+  height: 10.3em;
+  width: 10.3em;
+}
+.Albums:hover {
+  cursor: pointer;
+}
+.Albums {
+  height: 10.3em;
+  width: 10.3em;
+}
+
+.items .fa-play {
+  position: absolute;
+  bottom: 50px;
+  right: 20%;
+  color: black;
+  font-size: 20px;
+  padding: 16px;
+  background-color: rgb(0, 212, 0);
+  border-radius: 100%;
+  transform: translateX(50%);
+  transition: 0.2s cubic-bezier(0.41, 1.15, 0.76, 0.98);
+
+  opacity: 0;
+}
+
+.fa-play:hover {
+  background-color: rgb(0, 174, 0);
+}
+.items:hover .down {
+  bottom: 90px;
+  right: 40px;
+  opacity: 1;
+}
+
+.items:hover .up {
+  bottom: 65px;
+  right: 40px;
+  opacity: 1;
+}
+.songs {
+  margin-top: 3px;
+  border-radius: 7px;
+  background-color: #0f0f0f;
+}
+
+.songs > ul {
+  padding-top: 3px;
+  padding-bottom: 10px;
+  color: #c9c9c9;
+}
+
+.songs > ul > li {
+  cursor: pointer;
+  border-radius: 10px;
+  background-color: #1e1a1ae8;
+  list-style: none;
+  padding: 20px;
+  margin: 5px;
+}
