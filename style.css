@@ -234,7 +234,6 @@ nav {
   height: 10.3em;
   width: 10.3em;
 }
-
 .items .fa-play {
   position: absolute;
   bottom: 50px;
@@ -263,6 +262,85 @@ nav {
   bottom: 65px;
   right: 40px;
   opacity: 1;
+}
+
+@media only screen and (max-width: 1420px) {
+  .Albums {
+    height: 7em;
+    width: 7em;
+  }
+  .Artist {
+    border-radius: 100%;
+    height: 7em;
+    width: 7em;
+  }
+
+  .items .fa-play {
+    position: absolute;
+    bottom: 50px;
+    right: 30%;
+    color: black;
+    font-size: 12px;
+    padding: 10px;
+    background-color: rgb(0, 212, 0);
+    border-radius: 100%;
+    transform: translateX(50%);
+    transition: 0.2s cubic-bezier(0.41, 1.15, 0.76, 0.98);
+
+    opacity: 0;
+  }
+
+  .fa-play:hover {
+    background-color: rgb(0, 174, 0);
+  }
+  .items:hover .down {
+    bottom: 90px;
+    right: 80px;
+    opacity: 1;
+  }
+
+  .items:hover .up {
+    bottom: 65px;
+    right: 80px;
+    opacity: 1;
+  }
+}
+
+@media only screen and (max-width: 1299px) {
+  .items:hover .up {
+    bottom: 85px;
+    right: 60px;
+    opacity: 1;
+  }
+}
+
+@media only screen and (max-width: 1332px) {
+  .items:hover .down {
+    bottom: 110px;
+    right: 80px;
+    opacity: 1;
+  }
+}
+@media only screen and (max-width: 1299px) {
+  .items:hover .down {
+    bottom: 110px;
+    right: 60px;
+    opacity: 1;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .items:hover .down {
+    bottom: 120px;
+    right: 40px;
+    opacity: 1;
+  }
+
+  .items:hover .up {
+    bottom: 85px;
+    right: 40px;
+    opacity: 1;
+  }
 }
 .songs {
   margin-top: 3px;
@@ -388,4 +466,76 @@ nav {
 #totalDuration {
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+@media only screen and (max-width: 664px) {
+  .Albums {
+    height: 5em;
+    width: 5em;
+  }
+  .Artist {
+    border-radius: 100%;
+    height: 5em;
+    width: 5em;
+  }
+  .search-bar {
+    display: none;
+  }
+  .left {
+    display: none;
+  }
+  .right {
+    width: 100vw;
+  }
+  .right-up {
+    width: 100vw;
+  }
+
+  .items .fa-play {
+    position: absolute;
+    bottom: 50px;
+    right: 30%;
+    color: black;
+    font-size: 9px;
+    padding: 8px;
+    background-color: rgb(0, 212, 0);
+    border-radius: 100%;
+    transform: translateX(50%);
+    transition: 0.2s cubic-bezier(0.41, 1.15, 0.76, 0.98);
+
+    opacity: 0;
+  }
+
+  .items:active .down {
+    bottom: 75px;
+    right: 30px;
+    opacity: 1;
+  }
+
+  .items:active .up {
+    bottom: 55px;
+    right: 30px;
+    opacity: 1;
+  }
+  .name {
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+      sans-serif;
+    font-size: 0.7em;
+    color: white;
+    margin-left: 7px;
+  }
+  .description {
+    margin-left: 7px;
+    font-size: 0.5em;
+    color: rgb(192, 192, 192);
+  }
+  .buttons {
+    font-size: 10px;
+  }
+  .time {
+    font-size: 10px;
+  }
+  #song-name {
+    font-size: 11px;
+  }
 }
