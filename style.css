@@ -493,7 +493,7 @@ nav {
 
   .items .fa-play {
     position: absolute;
-    bottom: 50px;
+    bottom: 5px;
     right: 30%;
     color: black;
     font-size: 9px;
@@ -506,13 +506,13 @@ nav {
     opacity: 0;
   }
 
-  .items:active .down {
+  .items:hover .down {
     bottom: 75px;
     right: 30px;
     opacity: 1;
   }
 
-  .items:active .up {
+  .items:hover .up {
     bottom: 55px;
     right: 30px;
     opacity: 1;
