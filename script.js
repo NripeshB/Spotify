@@ -11,7 +11,24 @@ function formatTime(seconds) {
 
 audioPlayer.addEventListener('timeupdate', function() {
     currentTimeDisplay.textContent = formatTime(audioPlayer.currentTime);
+    const dot = document.querySelector(".dot");
+    const progress = (audioPlayer.currentTime / audioPlayer.duration) * 70 + 1; 
+    dot.style.transform = `translate(${progress}vw, 7px)`; 
+
+    const line = document.querySelector(".line");
+    const progress2 = 70-((audioPlayer.currentTime / audioPlayer.duration) * 70); 
+    line.style.width = `${progress2}vw`;
+
+    const linegreen = document.querySelector(".line-green");
+    const progress3 = (audioPlayer.currentTime / audioPlayer.duration) * 70; 
+    linegreen.style.width = `${progress3}vw`; 
+
+   
+
+
+
 });
+
 audioPlayer.addEventListener('loadedmetadata', function() {
     totalDurationDisplay.textContent = formatTime(audioPlayer.duration);
 });
@@ -114,3 +131,4 @@ document.querySelectorAll(".Creators .fa-play").forEach(playIcon => {
         }
     });
 });
+

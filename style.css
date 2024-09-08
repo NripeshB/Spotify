@@ -354,6 +354,7 @@ nav {
   width: 60vw;
   border: 2px solid white;
   border-radius: 2px;
+  transition: all 0.5s ease;
 }
 .line-green {
   margin-top: 15px;
@@ -361,6 +362,7 @@ nav {
   width: 10vw;
   border: 2px solid rgb(13, 113, 0);
   border-radius: 2px;
+  transition: all 0.5s ease;
 }
 
 /* Define a border style for the active list item */
@@ -372,9 +374,19 @@ nav {
 .dot {
   border: 7px solid rgb(62, 138, 0);
   border-radius: 100%;
-  transform: translate(calc(1vw + 70vw), 7px);
+  transform: translate(calc(1vw + 0vw), 7px);
+  transition: all 0.5s ease;
 }
 
 #song-name {
   width: 10vw;
+}
+
+#currentTime {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+#totalDuration {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
