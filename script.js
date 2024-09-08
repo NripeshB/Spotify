@@ -40,8 +40,45 @@ function playSong(lielement, songsrc, song) {
 
 
 const playButton = document.getElementById("play");
+const backwardButton = document.getElementById("backward");
+const forwardButton = document.getElementById("forward");
+const songs = Array.from(document.querySelectorAll(".song"));
 
+function getSongById(id) {
+    return songs.find(song => parseInt(song.id) === id);
+}
 
+backwardButton.addEventListener("click", function(event) {
+    event.stopPropagation(); 
+    const currentSongId = parseInt(document.querySelector(".song.active").id);
+    const previousSong = getSongById(currentSongId - 1);
+    if (previousSong) {
+        const songSrc = previousSong.getAttribute('data-src');
+        const song = previousSong.textContent;
+        playSong(previousSong, songSrc, song);
+    }
+    else{
+        const songSrc = document.getElementById("10").getAttribute('data-src');
+        const song = document.getElementById("10").textContent;
+        playSong(document.getElementById("10"), songSrc, song);
+    }
+});
+
+forwardButton.addEventListener("click", function(event) {
+    event.stopPropagation(); 
+    const currentSongId = parseInt(document.querySelector(".song.active").id);
+    const nextSong = getSongById(currentSongId + 1);
+    if (nextSong) {
+        const songSrc = nextSong.getAttribute('data-src');
+        const song = nextSong.textContent;
+        playSong(nextSong, songSrc, song);
+    }
+    else{
+        const songSrc = document.getElementById("1").getAttribute('data-src');
+        const song = document.getElementById("1").textContent;
+        playSong(document.getElementById("1"), songSrc, song);
+    }
+});
 playButton.addEventListener("click", function(event) {
     event.stopPropagation(); 
 
@@ -66,13 +103,14 @@ document.querySelectorAll(".song").forEach(item => {
     });
 });
  
+
 document.querySelectorAll(".Creators .fa-play").forEach(playIcon => {
     playIcon.addEventListener('click', function() {
-        const songSrc = this.getAttribute('data-src');  
-        const song = this.textContent;  
+        const songSrc = this.getAttribute('data-src');   
         if (songSrc) {
-            playSong(document.querySelector(`.song[data-src="${songSrc}"]`), songSrc, song);
+            const songElement = document.querySelector(`.song[data-src="${songSrc}"]`);
+            const song = songElement.textContent;
+            playSong(songElement, songSrc, song);
         }
     });
 });
-
