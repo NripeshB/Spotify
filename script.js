@@ -12,22 +12,24 @@ function formatTime(seconds) {
 audioPlayer.addEventListener('timeupdate', function() {
     currentTimeDisplay.textContent = formatTime(audioPlayer.currentTime);
     const dot = document.querySelector(".dot");
-    const progress = (audioPlayer.currentTime / audioPlayer.duration) * 70 + 1; 
+    const progress = (audioPlayer.currentTime / audioPlayer.duration) * 70 ; 
     dot.style.transform = `translate(${progress}vw, 7px)`; 
 
-    const line = document.querySelector(".line");
-    const progress2 = 70-((audioPlayer.currentTime / audioPlayer.duration) * 70); 
-    line.style.width = `${progress2}vw`;
-
-    const linegreen = document.querySelector(".line-green");
-    const progress3 = (audioPlayer.currentTime / audioPlayer.duration) * 70; 
-    linegreen.style.width = `${progress3}vw`; 
-
-   
-
+    
 
 
 });
+
+document.querySelector(".seekbar").addEventListener("click", function(e) {
+    e.stopPropagation(); 
+    const seekbarWidth = this.offsetWidth;
+    const offsetX = e.offsetX;
+    const duration = audioPlayer.duration;
+    const newTime = (offsetX / seekbarWidth) * duration;
+
+    audioPlayer.currentTime = newTime;
+});
+
 
 audioPlayer.addEventListener('loadedmetadata', function() {
     totalDurationDisplay.textContent = formatTime(audioPlayer.duration);
@@ -51,7 +53,9 @@ function playSong(lielement, songsrc, song) {
     audioPlayer.play();
 
     audioPlayer.onended = function() {
-        lielement.classList.remove('active'); 
+        document.getElementById("play").classList.remove("fa-pause");
+        document.getElementById("play").classList.add("fa-play"); 
+        lielement.classList.remove('active');
     };
 }
 
@@ -81,7 +85,7 @@ backwardButton.addEventListener("click", function(event) {
     }
 });
 
-forwardButton.addEventListener("click", function(event) {
+forwardButton.addEventListener("click" , function(event) {
     event.stopPropagation(); 
     const currentSongId = parseInt(document.querySelector(".song.active").id);
     const nextSong = getSongById(currentSongId + 1);
@@ -96,6 +100,8 @@ forwardButton.addEventListener("click", function(event) {
         playSong(document.getElementById("1"), songSrc, song);
     }
 });
+
+
 playButton.addEventListener("click", function(event) {
     event.stopPropagation(); 
 
