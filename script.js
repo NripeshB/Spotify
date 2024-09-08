@@ -9,27 +9,19 @@ function formatTime(seconds) {
     return `${mins}:${secs < 10 ? '0' : ''}${secs}`;
 }
 
-
 audioPlayer.addEventListener('timeupdate', function() {
-
     currentTimeDisplay.textContent = formatTime(audioPlayer.currentTime);
 });
-
-
 audioPlayer.addEventListener('loadedmetadata', function() {
-   
     totalDurationDisplay.textContent = formatTime(audioPlayer.duration);
 });
-
-
 audioPlayer.addEventListener('ended', function() {
     currentTimeDisplay.textContent = '0:00';
 });
 
- 
-function playSong(lielement, songsrc) {
+function playSong(lielement, songsrc, song) {
     document.querySelectorAll(".song").forEach(li => li.classList.remove("active"));
-
+    document.getElementById("song-name").textContent = song;
     lielement.classList.add("active");
     audioPlayer.src = songsrc;
     const playIcon = document.getElementById("play");
@@ -68,16 +60,18 @@ playButton.addEventListener("click", function(event) {
  
 document.querySelectorAll(".song").forEach(item => {
     item.addEventListener('click', function() {
-        const songSrc = this.getAttribute('data-src');  
-        playSong(this, songSrc);
+        const songSrc = this.getAttribute('data-src'); 
+        const song = this.textContent; 
+        playSong(this, songSrc, song);
     });
 });
  
 document.querySelectorAll(".Creators .fa-play").forEach(playIcon => {
     playIcon.addEventListener('click', function() {
-        const songSrc = this.getAttribute('data-src');   
+        const songSrc = this.getAttribute('data-src');  
+        const song = this.textContent;  
         if (songSrc) {
-            playSong(document.querySelector(`.song[data-src="${songSrc}"]`), songSrc);
+            playSong(document.querySelector(`.song[data-src="${songSrc}"]`), songSrc, song);
         }
     });
 });
