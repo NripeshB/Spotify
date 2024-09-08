@@ -14,10 +14,6 @@ audioPlayer.addEventListener('timeupdate', function() {
     const dot = document.querySelector(".dot");
     const progress = (audioPlayer.currentTime / audioPlayer.duration) * 70 ; 
     dot.style.transform = `translate(${progress}vw, 7px)`; 
-
-    
-
-
 });
 
 document.querySelector(".seekbar").addEventListener("click", function(e) {
@@ -137,4 +133,5 @@ document.querySelectorAll(".Creators .fa-play").forEach(playIcon => {
         }
     });
 });
+
 
